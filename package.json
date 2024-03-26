@@ -1,0 +1,25 @@
+{
+  "name": "fresh-app",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "start": "concurrently -n backend,frontend \"pnpm run -C backend start\" \"pnpm run -C frontend start\"",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.29",
+    "prettier": "^3.2.5",
+    "turbo": "^1.12.5"
+  },
+  "packageManager": "pnpm@8.15.5",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
